@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'dataquint-workspace-root',
+  selector: 'app-gv-online',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

@@ -25,6 +25,27 @@
     "app-gv-online-e2e": {
       "tags": [],
       "implicitDependencies": ["app-gv-online"]
+    },
+    "geovisia-online": {
+      "tags": []
+    },
+    "geovisia-components": {
+      "tags": []
+    },
+    "dataquint-core": {
+      "tags": []
+    },
+    "dataquint-gis": {
+      "tags": []
+    },
+    "geovisia-addon-schouwen": {
+      "tags": []
+    },
+    "geovisia-addon-streetsmart": {
+      "tags": []
+    },
+    "geovisia-admin": {
+      "tags": []
     }
   }
 }

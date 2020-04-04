@@ -15,7 +15,27 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dataquint-workspace/geovisia/online": [
+        "libs/geovisia/online/src/index.ts"
+      ],
+      "@dataquint-workspace/geovisia/components": [
+        "libs/geovisia/components/src/index.ts"
+      ],
+      "@dataquint-workspace/dataquint/core": [
+        "libs/dataquint/core/src/index.ts"
+      ],
+      "@dataquint-workspace/dataquint/gis": ["libs/dataquint/gis/src/index.ts"],
+      "@dataquint-workspace/geovisia/addon-schouwen": [
+        "libs/geovisia/addon-schouwen/src/index.ts"
+      ],
+      "@dataquint-workspace/geovisia/addon-streetsmart": [
+        "libs/geovisia/addon-streetsmart/src/index.ts"
+      ],
+      "@dataquint-workspace/geovisia/admin": [
+        "libs/geovisia/admin/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

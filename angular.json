@@ -123,6 +123,236 @@
           }
         }
       }
+    },
+    "geovisia-online": {
+      "projectType": "library",
+      "root": "libs/geovisia/online",
+      "sourceRoot": "libs/geovisia/online/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/geovisia/online/tsconfig.lib.json",
+              "libs/geovisia/online/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/geovisia/online/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/geovisia/online/jest.config.js",
+            "tsConfig": "libs/geovisia/online/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/geovisia/online/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "geovisia-components": {
+      "projectType": "library",
+      "root": "libs/geovisia/components",
+      "sourceRoot": "libs/geovisia/components/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/geovisia/components/tsconfig.lib.json",
+              "libs/geovisia/components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/geovisia/components/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/geovisia/components/jest.config.js",
+            "tsConfig": "libs/geovisia/components/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/geovisia/components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "dataquint-core": {
+      "projectType": "library",
+      "root": "libs/dataquint/core",
+      "sourceRoot": "libs/dataquint/core/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/dataquint/core/tsconfig.lib.json",
+              "libs/dataquint/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/dataquint/core/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/dataquint/core/jest.config.js",
+            "tsConfig": "libs/dataquint/core/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/dataquint/core/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "dataquint-gis": {
+      "projectType": "library",
+      "root": "libs/dataquint/gis",
+      "sourceRoot": "libs/dataquint/gis/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/dataquint/gis/tsconfig.lib.json",
+              "libs/dataquint/gis/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/dataquint/gis/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/dataquint/gis/jest.config.js",
+            "tsConfig": "libs/dataquint/gis/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/dataquint/gis/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "geovisia-addon-schouwen": {
+      "projectType": "library",
+      "root": "libs/geovisia/addon-schouwen",
+      "sourceRoot": "libs/geovisia/addon-schouwen/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/geovisia/addon-schouwen/tsconfig.lib.json",
+              "libs/geovisia/addon-schouwen/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/geovisia/addon-schouwen/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/geovisia/addon-schouwen/jest.config.js",
+            "tsConfig": "libs/geovisia/addon-schouwen/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/geovisia/addon-schouwen/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "geovisia-addon-streetsmart": {
+      "projectType": "library",
+      "root": "libs/geovisia/addon-streetsmart",
+      "sourceRoot": "libs/geovisia/addon-streetsmart/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/geovisia/addon-streetsmart/tsconfig.lib.json",
+              "libs/geovisia/addon-streetsmart/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/geovisia/addon-streetsmart/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/geovisia/addon-streetsmart/jest.config.js",
+            "tsConfig": "libs/geovisia/addon-streetsmart/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/geovisia/addon-streetsmart/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "geovisia-admin": {
+      "projectType": "library",
+      "root": "libs/geovisia/admin",
+      "sourceRoot": "libs/geovisia/admin/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/geovisia/admin/tsconfig.lib.json",
+              "libs/geovisia/admin/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/geovisia/admin/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/geovisia/admin/jest.config.js",
+            "tsConfig": "libs/geovisia/admin/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/geovisia/admin/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
