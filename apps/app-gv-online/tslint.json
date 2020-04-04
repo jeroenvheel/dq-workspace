@@ -1,0 +1,15 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "dataquintWorkspace",
+      "camelCase"
+    ],
+    "component-selector": [true, "element", "dataquint-workspace", "kebab-case"]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}

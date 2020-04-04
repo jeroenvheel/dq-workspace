@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "projects": {
+    "app-gv-online": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/app-gv-online",
+      "sourceRoot": "apps/app-gv-online/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/app-gv-online",
+            "index": "apps/app-gv-online/src/index.html",
+            "main": "apps/app-gv-online/src/main.ts",
+            "polyfills": "apps/app-gv-online/src/polyfills.ts",
+            "tsConfig": "apps/app-gv-online/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/app-gv-online/src/favicon.ico",
+              "apps/app-gv-online/src/assets"
+            ],
+            "styles": ["apps/app-gv-online/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/app-gv-online/src/environments/environment.ts",
+                  "with": "apps/app-gv-online/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "app-gv-online:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "app-gv-online:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "app-gv-online:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/app-gv-online/tsconfig.app.json",
+              "apps/app-gv-online/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/app-gv-online/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/app-gv-online/jest.config.js",
+            "tsConfig": "apps/app-gv-online/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/app-gv-online/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "app-gv-online-e2e": {
+      "root": "apps/app-gv-online-e2e",
+      "sourceRoot": "apps/app-gv-online-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/app-gv-online-e2e/cypress.json",
+            "tsConfig": "apps/app-gv-online-e2e/tsconfig.e2e.json",
+            "devServerTarget": "app-gv-online:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "app-gv-online:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/app-gv-online-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/app-gv-online-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "10d26262-8b28-46e0-ab9e-e13fbbb3b388"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "app-gv-online"
+}
