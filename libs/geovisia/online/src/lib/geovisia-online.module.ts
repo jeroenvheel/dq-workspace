@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GeoVisiaOnlineRoutingModule } from './geovisia-online.routing.module';
 
 @NgModule({
-  imports: [CommonModule]
+  imports: [
+    CommonModule,
+    GeoVisiaOnlineRoutingModule
+  ],
 })
-export class GeovisiaOnlineModule {}
+export class GeovisiaOnlineModule { }
