@@ -53,6 +53,15 @@
     "app-grib-online-e2e": {
       "tags": [],
       "implicitDependencies": ["app-grib-online"]
+    },
+    "grib-components": {
+      "tags": []
+    },
+    "grib-online": {
+      "tags": []
+    },
+    "grib-pocket": {
+      "tags": []
     }
   }
 }

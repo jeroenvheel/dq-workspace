@@ -476,6 +476,102 @@
           }
         }
       }
+    },
+    "grib-components": {
+      "projectType": "library",
+      "root": "libs/grib/components",
+      "sourceRoot": "libs/grib/components/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/grib/components/tsconfig.lib.json",
+              "libs/grib/components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/grib/components/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/grib/components/jest.config.js",
+            "tsConfig": "libs/grib/components/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/grib/components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "grib-online": {
+      "projectType": "library",
+      "root": "libs/grib/online",
+      "sourceRoot": "libs/grib/online/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/grib/online/tsconfig.lib.json",
+              "libs/grib/online/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/grib/online/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/grib/online/jest.config.js",
+            "tsConfig": "libs/grib/online/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/grib/online/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "grib-pocket": {
+      "projectType": "library",
+      "root": "libs/grib/pocket",
+      "sourceRoot": "libs/grib/pocket/src",
+      "prefix": "dataquint-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/grib/pocket/tsconfig.lib.json",
+              "libs/grib/pocket/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/grib/pocket/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/grib/pocket/jest.config.js",
+            "tsConfig": "libs/grib/pocket/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/grib/pocket/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

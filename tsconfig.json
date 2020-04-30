@@ -25,9 +25,7 @@
       "@dataquint-workspace/dataquint/core": [
         "libs/dataquint/core/src/index.ts"
       ],
-      "@dataquint-workspace/dataquint/gis": [
-        "libs/dataquint/gis/src/index.ts"
-      ],
+      "@dataquint-workspace/dataquint/gis": ["libs/dataquint/gis/src/index.ts"],
       "@dataquint-workspace/geovisia/addon-schouwen": [
         "libs/geovisia/addon-schouwen/src/index.ts"
       ],
@@ -36,7 +34,12 @@
       ],
       "@dataquint-workspace/geovisia/admin": [
         "libs/geovisia/admin/src/index.ts"
-      ]
+      ],
+      "@dataquint-workspace/grib/components": [
+        "libs/grib/components/src/index.ts"
+      ],
+      "@dataquint-workspace/grib/online": ["libs/grib/online/src/index.ts"],
+      "@dataquint-workspace/grib/pocket": ["libs/grib/pocket/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
