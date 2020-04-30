@@ -25,7 +25,9 @@
       "@dataquint-workspace/dataquint/core": [
         "libs/dataquint/core/src/index.ts"
       ],
-      "@dataquint-workspace/dataquint/gis": ["libs/dataquint/gis/src/index.ts"],
+      "@dataquint-workspace/dataquint/gis": [
+        "libs/dataquint/gis/src/index.ts"
+      ],
       "@dataquint-workspace/geovisia/addon-schouwen": [
         "libs/geovisia/addon-schouwen/src/index.ts"
       ],

@@ -46,6 +46,13 @@
     },
     "geovisia-admin": {
       "tags": []
+    },
+    "app-grib-online": {
+      "tags": []
+    },
+    "app-grib-online-e2e": {
+      "tags": [],
+      "implicitDependencies": ["app-grib-online"]
     }
   }
 }
