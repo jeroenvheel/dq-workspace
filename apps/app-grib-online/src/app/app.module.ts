@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { GeovisiaComponentsModule} from '@dataquint-workspace/geovisia/components'
+
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
@@ -8,6 +10,7 @@ import { RouterModule } from '@angular/router';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    GeovisiaComponentsModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' })
   ],
   providers: [],
