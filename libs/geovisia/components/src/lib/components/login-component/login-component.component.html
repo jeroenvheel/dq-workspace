@@ -1,11 +1,11 @@
 <div class="form-group">
-  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mailaddres">
+  <input [type]="UserNameType" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [placeholder]="UserNameLabel" [(ngModel)]="UserName">
 </div>
 <div class="form-group">
-  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Wachtwoord">
+  <input type="password" class="form-control" id="exampleInputPassword1" [placeholder]="PasswordLabel" [(ngModel)]="Password">
 </div>
-<div class="form-group form-check">
-  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-  <label class="form-check-label" for="exampleCheck1">Gegevens onthouden</label>
+<div class="form-group form-check" *ngIf="RememberMeOption">
+  <input type="checkbox" class="form-check-input" id="remember" [(ngModel)]="Remember">
+  <label class="form-check-label" for="remember">Gegevens onthouden</label>
 </div>
-<button type="submit" class="btn btn-primary">Inloggen</button>
+<button type="button" class="btn btn-primary" (click)="login()">Inloggen</button>
