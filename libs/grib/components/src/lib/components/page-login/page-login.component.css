@@ -1,0 +1,9 @@
+.app__logo {
+  width: 160px;
+  height: 160px;
+  display: inline-block;
+}
+
+.login__form {
+  width: 400px;
+}
